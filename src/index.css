@@ -1,0 +1,37 @@
+:root {
+  --blue: #59e7db;
+  --purple: #6d47d9;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(120deg, var(--blue), var(--purple));
+  background-size: 100vw 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 01);
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.tdg {
+  color: white;
+}
+.bol {
+  color: var(--blue);
+}
