@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-
 class Form extends Component {
-  render() {
+
+render() {
     return (
+       <React.Fragment> 
       <div className="container">
-        Form!!!
+        BOL Form!!!
       </div>
+       </React.Fragment> 
     );
   }
 }
