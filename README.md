@@ -8,11 +8,6 @@ Bill of Lading Generator based on Canadian TDG.  :truck::page_facing_up::large_o
 + HTML/CSS
   - *, *:before, *:after { box-sizing: border-box;}
   - normalize.css
-+ JavaScript
-  - Google Maps API
-  - Goole Maps Distance Matrix API
-  - OpenWeatherMap API
-+ Location Data from location.json
-+ Locations filtering using side nav checkboxes (accessible through :running: on small screens)
++ React
 
-![](http://oto.filipstepien.com/assets/screenshot.jpg)
+![](http://bol.filipstepien.com/assets/screenshot.jpg)

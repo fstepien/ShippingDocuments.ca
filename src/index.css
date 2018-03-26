@@ -28,7 +28,9 @@ body {
   overflow: visible;
 
 }
-
+button {
+  border: 0;
+}
 header {
   background-color: rgba(0, 0, 0, 01);
   padding: 10px;
@@ -69,7 +71,6 @@ header button, .loginBtn {
   background: var(--orange);
   color: black;
   border-radius: 5px;
-  border: none;
   padding: 0.3em 1em;
   position: relative;
   top: -0.3em;
@@ -99,3 +100,45 @@ header button:hover, .loginBtn:hover {
   /* overflow: show; */
   padding: 1em;
 }
+
+.product-edit {
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product-edit input,
+.product-edit textarea,
+.product-edit select {
+  width: 50%;
+  padding: 10px;
+  line-height: 1;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+ 
+}
+.product-edit input:focus,
+.product-edit textarea:focus,
+.product-edit select:focus {
+  outline: 0;
+  background: #fef2de;
+}
+.product-edit input:first-of-type, 
+.product-edit input:last-of-type,
+.product-edit button {
+  width: 100%;
+}
+.product-edit button:hover {
+  color: white;
+  background: #333;
+  transition-duration: 0.5s;
+}
+

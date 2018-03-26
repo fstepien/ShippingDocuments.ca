@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import firebase from 'firebase';
-import base, { firebaseApp } from "./base";
-import LoginOptions from './LoginOptions';
+// import { Redirect } from 'react-router-dom';
+// import firebase from 'firebase';
+// import base, { firebaseApp } from "./base";
+// import LoginOptions from './LoginOptions';
 
 
 class Login extends Component {
