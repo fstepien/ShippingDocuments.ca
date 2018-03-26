@@ -99,9 +99,10 @@ header button:hover, .loginBtn:hover {
   box-shadow: var(--shadow);
   /* overflow: show; */
   padding: 1em;
+  position: relative;
 }
 
-.product-edit {
+.product-edit, .product-list {
   border: 2px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,3 +143,44 @@ header button:hover, .loginBtn:hover {
   transition-duration: 0.5s;
 }
 
+.product-list {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.product-item {
+  width: 100%;
+  padding: 10px;
+  line-height: 1;
+  border: 0;
+  border-bottom: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+.product-item:last-child {
+  border: 0;
+}
+
+.my-product-label, .add-product-label {
+    position: absolute;
+    border-radius: 5px;
+    padding: 0.2em 1em;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-20%) rotate(-15deg);
+    transform: translateX(-20%) rotate(-15deg);
+}
+.add-product-label{
+  color: var(--blue);
+  background: var(--purple)
+}
+.my-product-label {
+  color: var(--purple);
+  background: var(--blue)
+}
