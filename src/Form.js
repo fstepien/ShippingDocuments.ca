@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddProduct from './AddProduct';
 import ProductList from './ProductList';
+import Bol from './bol';
 
 class Form extends Component {
 
@@ -24,13 +25,7 @@ render() {
         <AddProduct addProduct={this.addProduct} />
         <ProductList products={this.state.products}/>
         </section>
-        <div className="container mt50">
-        <div className="box">
-            <h2>Output</h2>
-            
-        </div>
-
-      </div>
+        <Bol />
        </React.Fragment> 
     );
   }

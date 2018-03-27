@@ -19,6 +19,7 @@ body {
 
 .container {
   width: 90%;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
 }
@@ -150,7 +151,7 @@ list-style: none;
 }
 .product-item {
   width: 100%;
-  padding: 10px;
+  padding: 0px 10px 5px 10px;
   line-height: 1;
   border: 0;
   border-bottom: 1px solid #000;
@@ -158,11 +159,30 @@ list-style: none;
      -moz-appearance: none;
           appearance: none;
   border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .product-item:last-child {
   border: 0;
 }
-
+    .product-item-name {
+      float: left;
+    }
+    .product-item-change {
+      float: right;
+      line-height: 1;
+      overflow: hidden;
+    }
+    .product-item img {
+      height: 1.5em;
+      padding: 0.2em;
+      position: relative;
+      top: 0.4em;
+    }
+    .product-item input {
+      width: 3em;
+    }
 .my-product-label, .add-product-label {
     position: absolute;
     border-radius: 5px;

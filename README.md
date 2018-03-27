@@ -9,6 +9,10 @@ Bill of Lading Generator based on Canadian TDG.  :truck::page_facing_up::large_o
   - *, *:before, *:after { box-sizing: border-box;}
   - normalize.css
 + React
-+ Firebase
+  - JSX
+  - URL ruting with "react-router-dom": "^4.2.2",
+  - User products maintained in state
+  - .createRef with "react"/"react-dom" "^16.3.0-alpha.1"
++ Firebase :fire:
 
 ![](http://bol.filipstepien.com/assets/screenshot.jpg)
