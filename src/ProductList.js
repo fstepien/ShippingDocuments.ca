@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductListItem from './ProductListItem';
 
 class ProductList extends React.Component {
 
@@ -15,15 +16,11 @@ return (
       {Object.keys(this.props.products)
       .sort((a,b) => this.props.products[a].desc.toLowerCase() > this.props.products[b].desc.toLowerCase() ? 1: -1)
       .map(key => (
-          <li key={key} index={key} className="product-item">
-            <span className="product-item-name"> 
-              {this.props.products[key].desc}</span>
-            <span className="product-item-change">
-              <img src="/assets/minus-square.svg" alt="minus"/>
-              <input type="number" placeholder="1"/>
-              <img src="/assets/plus-square.svg" alt="plus" onClick={this.plusClick}/>
-            </span>
-          </li>
+          <ProductListItem 
+            key={key}
+            index={key}
+            details={this.props.products[key]}
+            addToOrder={this.props.addToOrder}/>
       ))}
     </ul>
   </div>

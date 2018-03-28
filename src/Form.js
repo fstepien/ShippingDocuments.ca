@@ -10,10 +10,10 @@ state = {
   products: {}
 };
 
-addToOrder = (key) => {
-  console.log(key);
+addToOrder = (key, value) => {
+  console.log(key, value);
   const order = {...this.state.order};
-  order[key] = order[key] + 1 || 1;
+  order[key] = order[key] + value || value;
   this.setState({order: order});
 }
 
