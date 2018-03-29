@@ -3,10 +3,6 @@ import ProductListItem from './ProductListItem';
 
 class ProductList extends React.Component {
 
-plusClick = () => {
-  this.props.addToOrder(this.props.index);
-}
-
 render() {
   
 return (
@@ -20,7 +16,8 @@ return (
             key={key}
             index={key}
             details={this.props.products[key]}
-            addToOrder={this.props.addToOrder}/>
+            addToOrder={this.props.addToOrder}
+            subFromOrder={this.props.subFromOrder}/>
       ))}
     </ul>
   </div>

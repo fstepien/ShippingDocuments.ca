@@ -16,6 +16,12 @@ addToOrder = (key, value) => {
   order[key] = order[key] + value || value;
   this.setState({order: order});
 }
+subFromOrder = (key, value) => {
+  console.log(key, value);
+  const order = {...this.state.order};
+  order[key] >= value ? order[key] = order[key] - value : order[key] = 0;
+  this.setState({order: order});
+}
 
 addProduct = product => {
   const products = {...this.state.products};
@@ -32,7 +38,8 @@ render() {
         <AddProduct addProduct={this.addProduct} />
         <ProductList 
             products={this.state.products}
-            addToOrder={this.addToOrder}/>
+            addToOrder={this.addToOrder}
+            subFromOrder={this.subFromOrder}/>
         </section>
         <Bol />
        </React.Fragment> 

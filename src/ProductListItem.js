@@ -18,7 +18,10 @@ changeValue = (e) => {
 
 plusClick = () => {
   
-    this.props.addToOrder(this.props.index, this.numberRef.value.value);
+    this.props.addToOrder(this.props.index, Number(this.numberRef.value.value));
+}
+subClick = () => {
+  this.props.subFromOrder(this.props.index, Number(this.numberRef.value.value));
 }
 
 render() {
@@ -32,8 +35,14 @@ return (
               {desc}
             </span>
             <span className="product-item-change">
-              <img src="/assets/minus-square.svg" alt="minus"/>
-              <input type="number" value={this.state.number} ref={this.numberRef} onChange={this.changeValue}/>
+
+              <img src="/assets/minus-square.svg" alt="minus" onClick={this.subClick}/>
+
+              <input type="number" 
+                value={this.state.number} 
+                ref={this.numberRef} 
+                onChange={this.changeValue}/>
+
               <img src="/assets/plus-square.svg" alt="plus" onClick={this.plusClick}/>
             </span>
           </li>
