@@ -5,7 +5,7 @@ class Consignor extends Component {
 render() {
     return (
   
-        <div className="container bol-consignor">
+        <div className="bol-consignor">
           SHIP FROM 
           </div>
     );

@@ -207,14 +207,15 @@ list-style: none;
   background: var(--blue)
 }
 /* BOL COMPONENT */
-
+.bol-form {
+  line-height: 2em;
+}
 .bol-product:first-of-type {
   border-bottom: solid 1px;
 }
 .bol-list {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr 2fr 2fr 8fr  2fr 3fr 3fr;
-  grid-row-gap: 0.5em;
 }
 .bol-line{
   grid-column: 1 / 10;
@@ -222,7 +223,16 @@ list-style: none;
 }
 .bol-consignor{
   grid-column: 1 / 6;
+  border: solid 1px;
+  padding: 5px;
+  margin: 0 5px 10px 0;
 }
 .bol-consignee{
   grid-column: 6 / 10;
+  border: solid 1px;
+  padding: 5px;
+  margin: 0 0 10px 5px;
+}
+.total, .kg, .subTotal {
+  text-align: end;
 }

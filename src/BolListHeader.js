@@ -9,7 +9,7 @@ render() {
       <div className="nos">Shipping Name</div>
       <div className="classDG">Class</div>
       <div className="pg">PG</div>
-      <div className="tox">Tox</div>
+      <div className="tox">Toxic</div>
       <div className="desc">Product Name</div>
       <div className="qty">Qty</div>
       <div className="kg">Weight</div>

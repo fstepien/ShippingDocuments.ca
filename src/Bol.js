@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Consignor from './Consignor';
-import Consignee from './Consignee';
+import Consignor from './BolConsignor';
+import Consignee from './BolConsignee';
 import BolListHeader from './BolListHeader';
 import Product from './Product';
+
 
 class Bol extends Component {
 
@@ -35,9 +36,8 @@ const total = orderIds.reduce((prevTotal, key) => {
                     })}
                              
               </div>
-              
               <div className="total">
-                Total Weight {Number(total).toFixed(2)} kg / {Number(total * 2.20462).toFixed(2)} lb.
+                <strong>Total Weight {Number(total).toFixed(2)} kg / {Number(total * 2.20462).toFixed(2)} lb.</strong>
               </div>
           </div>
         </div>

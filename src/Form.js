@@ -17,7 +17,6 @@ addToOrder = (key, value) => {
   this.setState({order: order});
 }
 subFromOrder = (key, value) => {
-  console.log(key, value);
   const order = {...this.state.order};
   order[key] >= value ? order[key] = order[key] - value : order[key] = 0;
   this.setState({order: order});

@@ -4,7 +4,7 @@ class Consignee extends Component {
 
 render() {
     return (
-        <div className="container bol-consignee">
+        <div className="bol-consignee">
           SHIP TO
         </div>
 
