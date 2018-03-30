@@ -14,7 +14,7 @@ addProduct = (e) => {
     e.preventDefault();
     const product = {
       desc: this.descRef.value.value,
-      price: this.unRef.value.value, 
+      un: this.unRef.value.value, 
       classDG: this.classDGRef.value.value, 
       pg: this.pgRef.value.value,
       nos: this.nosRef.value.value,
@@ -27,13 +27,13 @@ addProduct = (e) => {
 render() {
 return (
   <div className="box">
-    <span className="add-product-label">My Products</span>
+    <span className="add-product-label">Add Products</span>
     <form className="product-edit" onSubmit={this.addProduct}>
       <input name="desc" ref={this.descRef} type="text" placeholder="Product Name" required />
       <input name="un" ref={this.unRef} type="text" placeholder="UN Number" />
       <input name="class" ref={this.classDGRef} type="text" placeholder="Class" />
       <input name="pg" ref={this.pgRef} type="text" placeholder="P.G." />
-      <input name="kg" ref={this.kgRef} type="text" placeholder="Weight (kg)" />
+      <input name="kg" ref={this.kgRef} type="text" placeholder="Weight (kg)" required/>
       <input name="nos" ref={this.nosRef} type="text" placeholder="N.O.S." />
       <button type="submit">+ Add Product</button>
     </form>

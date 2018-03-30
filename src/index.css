@@ -51,9 +51,11 @@ header {
 .bol {
   color: var(--blue);
 }
+ul {
+  list-style: none;
+}
 
 header ul, header button, .loginBtn {
-  list-style: none;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -203,4 +205,24 @@ list-style: none;
 .my-product-label {
   color: var(--purple);
   background: var(--blue)
+}
+/* BOL COMPONENT */
+
+.bol-product:first-of-type {
+  border-bottom: solid 1px;
+}
+.bol-list {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr 2fr 2fr 8fr  2fr 3fr 3fr;
+  grid-row-gap: 0.5em;
+}
+.bol-line{
+  grid-column: 1 / 10;
+  border-bottom: solid 1px;
+}
+.bol-consignor{
+  grid-column: 1 / 6;
+}
+.bol-consignee{
+  grid-column: 6 / 10;
 }

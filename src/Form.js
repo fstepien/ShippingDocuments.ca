@@ -41,7 +41,9 @@ render() {
             addToOrder={this.addToOrder}
             subFromOrder={this.subFromOrder}/>
         </section>
-        <Bol />
+        <Bol 
+            products={this.state.products}
+            order={this.state.order}/>
        </React.Fragment> 
     );
   }
