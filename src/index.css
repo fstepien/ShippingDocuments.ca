@@ -233,6 +233,11 @@ list-style: none;
   padding: 5px;
   margin: 0 0 10px 5px;
 }
-.total, .kg, .subTotal {
+.total, .kg, .subTotal, .pallets {
   text-align: end;
+}
+.pallets input[type="text"] {
+  text-align: end;
+  border: 0;
+  border-bottom: solid 1px;
 }
