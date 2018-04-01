@@ -8,7 +8,8 @@ render() {
 return (
   <div className="box">
     <span className="my-product-label">My Products</span>
-    {Object.keys(this.props.products).length === 0 && this.props.products.constructor === Object ? console.log('empty') :
+    {Object.keys(this.props.products).length === 0 && this.props.products.constructor === Object ? 
+    "" :
     <ul className="product-list">
       {Object.keys(this.props.products)
       .sort((a,b) => this.props.products[a].desc.toLowerCase() > this.props.products[b].desc.toLowerCase() ? 1: -1)

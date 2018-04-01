@@ -7,7 +7,10 @@ class Form extends Component {
 
 state = {
   order: {},
-  products: {}
+  products: {},
+  profile: {
+    number: ""
+  }
 };
 
 addToOrder = (key, value) => {
@@ -30,6 +33,12 @@ addProduct = product => {
   });
 };
 
+addNumber = newNum => {
+  let profile = {...this.state.profile};
+  profile.number = newNum;
+  this.setState({profile});
+}
+
 render() {
     return (
        <React.Fragment> 
@@ -42,7 +51,9 @@ render() {
         </section>
         <Bol 
             products={this.state.products}
-            order={this.state.order}/>
+            order={this.state.order}
+            number={this.state.profile.number}
+            addNumber={this.addNumber}/>
        </React.Fragment> 
     );
   }

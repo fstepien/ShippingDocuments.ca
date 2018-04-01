@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class BolListHeader extends Component {
-
-render() {
-    return (
+const BolListHeader = () => (
       <React.Fragment>
       <div className="un">UN #</div>
       <div className="nos">Shipping Name</div>
@@ -16,8 +13,6 @@ render() {
       <div className="subTotal">SubTot</div>
       <div className="bol-line"></div>
       </React.Fragment>
-    );
-  }
-}
+    )
 
 export default BolListHeader;

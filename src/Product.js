@@ -20,7 +20,10 @@ return (
     <div className="nos">{product.nos}</div>
     <div className="classDG">{product.classDG}</div>
     <div className="pg">{product.pg}</div>
-    {getToxicUn().find(toxUn => {if(Number(toxUn) === Number(product.un)){return true}}) ? <div className="tox" style={toxStyle}>Toxic by Inhalation</div>: <div className="tox"> - </div>}    
+    {getToxicUn()
+      .find(toxUn => (Number(toxUn) === Number(product.un) ? true : false)) ? 
+    <div className="tox" style={toxStyle}>Toxic by Inhalation</div> : 
+    <div className="tox"> - </div>}    
     
     
     <div className="desc">{product.desc}</div>
