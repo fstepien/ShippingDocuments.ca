@@ -223,7 +223,12 @@ list-style: none;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr 2fr 2fr 8fr  2fr 3fr 3fr;
 }
-
+.order-info span{
+  grid-column: 6/7;
+}
+.order-info input{
+  grid-column-start: 7/10;
+}
 .bol-line{
   grid-column: 1 / 10;
   border-bottom: solid 1px;
@@ -233,19 +238,19 @@ list-style: none;
   padding: 5px;
   margin: 0 5px 10px 0;
 }
-.bol-consignee{
+.bol-consignee, .bol-info{
   grid-column: 6 / 10;
   padding: 5px;
   margin: 0 0 10px 5px;
 }
-  .bol-consignee, .bol-consignor {
+  .bol-consignee, .bol-consignor, .bol-info {
     display: grid;
     grid-template-columns: 7em;
   }
-  .bol-consignee span, .bol-consignor span {
+  .bol-consignee span, .bol-consignor span, .bol-info span {
     grid-column: 1 / 2;
   }
-  .bol-consignee input, .bol-consignor input {
+  .bol-consignee input, .bol-consignor input, .bol-info input {
     grid-column: 2 / 3;
     width: 100%;
     border: 0;
@@ -255,7 +260,7 @@ list-style: none;
   .bol-consignee div, .bol-consignor div {
     grid-column: span 2;
   }
-.total, .kg, .subTotal, .pallets {
+.total, .kg, .subTotal, .pallets, .tel-number {
   text-align: end;
 }
 .pallets input, .tel-number input, .sig input {

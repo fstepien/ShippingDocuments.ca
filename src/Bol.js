@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OrderInfo from './BolOrderInfo';
 import Consignor from './BolConsignor';
 import Consignee from './BolConsignee';
 import BolListHeader from './BolListHeader';
@@ -26,6 +27,7 @@ const total = orderIds.reduce((prevTotal, key) => {
           <div className="box bol-form">  
               <div className="bol-list">
                 <h2>Bill of Lading</h2>
+                <OrderInfo />
                 <Consignor />
                 <Consignee />
                 <BolListHeader />
