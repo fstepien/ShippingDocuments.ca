@@ -3,15 +3,20 @@ import ProductListItem from './ProductListItem';
 
 class ProductList extends React.Component {
 
+labelRef = React.createRef();
+
 render() {
+ 
+const availProducts = Object.keys(this.props.products).length === 0 && this.props.products.constructor === Object;  
   
 return (
   <div className="box">
-    <span className="my-product-label">My Products</span>
-    {Object.keys(this.props.products).length === 0 && this.props.products.constructor === Object ? 
+    <span className="my-product-label" data-state={!availProducts} ref={this.labelRef} >My Products</span>
+    { availProducts ? 
     "" :
     <ul className="product-list">
-      {Object.keys(this.props.products)
+      
+        {Object.keys(this.props.products)
       .sort((a,b) => this.props.products[a].desc.toLowerCase() > this.props.products[b].desc.toLowerCase() ? 1: -1)
       .map(key => (
           <ProductListItem 

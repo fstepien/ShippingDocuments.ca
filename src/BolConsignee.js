@@ -4,7 +4,7 @@ class Consignee extends Component {
 
 render() {
     return (
-        <div className="bol-consignee">
+        <div className="bol-right">
           <div>CONSIGNEE / SHIP TO</div>
           <span>Company: </span><input type="text"/>
           <span>Address:</span> <input type="text"/>

@@ -39,15 +39,15 @@ const total = orderIds.reduce((prevTotal, key) => {
                           product={this.props.products[key]}
                           count={this.props.order[key]} />
                     })}
-                             
-              </div>
-              <div className="total">
+                <div className="total">
                 <strong>Total Weight {Number(total).toFixed(2)} kg / {Number(total * 2.20462).toFixed(2)} lb.</strong>
+                </div>
+                <Pallets />
+                <BolFooter 
+                  addNumber={this.props.addNumber}
+                  number={this.props.number}/>              
               </div>
-              <Pallets />
-              <BolFooter 
-                addNumber={this.props.addNumber}
-                number={this.props.number}/>
+              
           </div>
         </div>
        </React.Fragment> 

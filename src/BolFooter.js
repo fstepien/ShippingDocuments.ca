@@ -38,16 +38,21 @@ render() {
       <React.Fragment>
       <div className="tel-number">
         <strong>24-Hour Number: </strong> 
-        <input type="text" value={this.props.number} onChange={this.addNumber} ref={this.newNum}/>
+        <input type="text" value={this.props.number} onChange={this.addNumber} ref={this.newNum} placeholder="enter a 24-number"/>
       </div>
       <p className="consignors-cert">I hereby declare that the contents of this consignment are fully and accurately described above by the proper shipping name, are properly classified and packaged, have dangerous goods safety marks properly affixed or displayed on them, and are in all respects in proper condition for transport according to the Transportation of Dangerous Goods Regulations.</p>
-      <div className="sig">
-        Shipper Name:
+      <div className="bol-left">
+        <span>Shipper Name: </span>
         <input type="text" value={this.state.name} onChange={this.changeName} ref={this.nameRef}/>
       </div>
       <div className="sig">
-        Carrier Company:
+      <span>Driver Signature: </span>
+        <input type="text" />
+      </div>
+      <div className="sig">
+      <span>Carrier Company: </span>
         <input type="text" value={this.state.carrier} onChange={this.changeCarrier}       ref={this.carrierRef}/>
+        
         <select type="text" name="terms" value={this.state.terms} onChange={this.changeTerms} ref={this.termsRef}>
           <option value="PPA">PPA</option>
           <option value="PPD">PPD</option>
