@@ -45,12 +45,12 @@ render() {
         <span>Shipper Name: </span>
         <input type="text" value={this.state.name} onChange={this.changeName} ref={this.nameRef}/>
       </div>
-      <div className="sig">
-      <span>Driver Signature: </span>
+      <div className="bol-right">
+      <span>Driver: </span>
         <input type="text" />
       </div>
-      <div className="sig">
-      <span>Carrier Company: </span>
+      <div className="bol-right">
+      <span>Carrier: </span>
         <input type="text" value={this.state.carrier} onChange={this.changeCarrier}       ref={this.carrierRef}/>
         
         <select type="text" name="terms" value={this.state.terms} onChange={this.changeTerms} ref={this.termsRef}>

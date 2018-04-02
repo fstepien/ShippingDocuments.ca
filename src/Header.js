@@ -12,10 +12,6 @@ const Header = (props) => {
             </h1>
             </Link>
             <ul>    
-                {props.authenticated ? 
-                (<li>logout</li>) :
-                ("")
-                }
                 <li><button>TDG Training</button></li>
             </ul>
           </div>

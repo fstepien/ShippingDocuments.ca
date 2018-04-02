@@ -12,9 +12,13 @@ this.setState({date: startDate})
 }
 
 dateRef = React.createRef();
+poRef = React.createRef();
+orderRef = React.createRef();
 
 state = {
-  date: ""
+  date: "",
+  po: "",
+  order: ""
 }
 
 changeDate = () => {
@@ -22,14 +26,39 @@ changeDate = () => {
   date = this.dateRef.value.value;
   this.setState({date})
 }
+changePo = () => {
+  let po = {...this.state.po};
+  po = this.poRef.value.value;
+  this.setState({po})
+}
+changeOrder = () => {
+  let order = {...this.state.order};
+  order = this.orderRef.value.value;
+  this.setState({order})
+}
 
 render() {
 
     return (
       <div className="bol-info">
-        <span>Date:</span> <input ref={this.dateRef} type="text" onChange={this.changeDate} value={this.state.date}/>
-        <span>Order Number:</span> <input type="text" />
-        <span>PO Number:</span> <input type="text" />
+        <span>Date:</span> 
+        <input 
+          ref={this.dateRef} 
+          type="text" 
+          onChange={this.changeDate} 
+          value={this.state.date}/>
+        <span>Order Number:</span> 
+        <input 
+          ref={this.orderRef} 
+          type="text" 
+          onChange={this.changeOrder} 
+          value={this.state.order} />
+        <span>PO Number:</span> 
+        <input 
+          ref={this.poRef} 
+          type="text" 
+          onChange={this.changePo} 
+          value={this.state.po} />
       </div>
     );
   }

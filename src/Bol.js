@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactToPrint from "react-to-print";
 import OrderInfo from './BolOrderInfo';
 import Consignor from './BolConsignor';
 import Consignee from './BolConsignee';
@@ -23,8 +24,14 @@ const total = orderIds.reduce((prevTotal, key) => {
 
     return (
        <React.Fragment> 
+        
         <div className="container mt50">
-          <div className="box bol-form">  
+        <ReactToPrint
+          trigger={() => <a href="#"><img id="print" src="/assets/print.svg" alt="minus" title="Print BOL"/></a>}
+          content={() => this.bolRef}
+          
+        /> 
+          <div className="box bol-form" ref={el => (this.bolRef = el)}>  
               <div className="bol-list">
                 <h2>Bill of Lading</h2>
                 <OrderInfo />
