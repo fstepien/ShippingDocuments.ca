@@ -27,7 +27,7 @@ const total = orderIds.reduce((prevTotal, key) => {
         
         <div className="container mt50">
         <ReactToPrint
-          trigger={() => <a href="#"><img id="print" src="/assets/print.svg" alt="minus" title="Print BOL"/></a>}
+          trigger={() => <button id="print"><img  src="/assets/print.svg" alt="minus" title="Print BOL"/></button>}
           content={() => this.bolRef}
           
         /> 
@@ -35,8 +35,8 @@ const total = orderIds.reduce((prevTotal, key) => {
               <div className="bol-list">
                 <h2>Bill of Lading</h2>
                 <OrderInfo />
-                <Consignor />
-                <Consignee />
+                <Consignor shipFrom={this.props.shipFrom} changeShipFrom={this.props.changeShipFrom}/>
+                <Consignee shipTo={this.props.shipTo} changeShipTo={this.props.changeShipTo}/>
                 <BolListHeader />
                 {orderIds
                   .sort((a,b) => this.props.products[a].desc.toLowerCase() > this.props.products[b].desc.toLowerCase() ? 1: -1)

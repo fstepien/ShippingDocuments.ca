@@ -24,7 +24,8 @@ return (
             index={key}
             details={this.props.products[key]}
             addToOrder={this.props.addToOrder}
-            subFromOrder={this.props.subFromOrder}/>
+            subFromOrder={this.props.subFromOrder}
+            deleteProduct={this.props.deleteProduct}/>
       ))}
     </ul>}
   </div>

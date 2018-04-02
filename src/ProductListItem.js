@@ -31,7 +31,13 @@ const {desc} = this.props.details;
 
 return (
 <li className="product-item">
+            
             <span className="product-item-name"> 
+              <button id="delete"><img  
+                src="/assets/delete.svg" 
+                alt="delete button" 
+                title="Delete Product" 
+                onClick={() => this.props.deleteProduct(this.props.index)}/></button>
               {desc}
             </span>
             <span className="product-item-change">
