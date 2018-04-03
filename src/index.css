@@ -55,7 +55,7 @@ ul {
   list-style: none;
 }
 
-header ul, header button, .loginBtn, .gmailBtn {
+header ul, header button, .loginBtn, .gmailBtn, .githubBtn, .emailBtn {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -80,13 +80,16 @@ header button, .loginBtn {
   box-shadow: var(--shadow);
   transition-duration: 1s;
 }
-.gmailBtn {
+.gmailBtn, .githubBtn, .emailBtn {
   background: white;
   color: black;
-  border: solid red 2px;
   border-radius: 5px;
   padding: 0.3em 1em;
   transition-duration: 1s;
+  margin-top: 1em;
+}
+.gmailBtn {
+  border: solid red 2px;
 }
 .gmailBtn:hover, .gmailBtn:focus {
   background: red;
@@ -94,18 +97,23 @@ header button, .loginBtn {
   border: solid red 2px;
   transition-duration: 0.5s;
 }
-
+.githubBtn {
+  border: solid #24292e 2px;
+}
+.githubBtn:hover, .githubBtn:focus {
+  background:#24292e;
+  color: white;
+  border: solid #24292e 2px;
+  transition-duration: 0.5s;
+}
 header button {
   box-shadow: 0px 5px 25px 0px #777;
 }
 header button:hover, .loginBtn:hover {
-
   background: #ffee53;
   transition-duration: 0.5s;
   cursor: pointer;
 }
-
-
 
 .hello {
   display: grid;

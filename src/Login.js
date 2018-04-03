@@ -24,7 +24,8 @@ state = {
 // }
 
 authHandler = async (authData) => {
-  const id = authData.additionalUserInfo.profile.id;
+  console.log(authData);
+  const id = authData.additionalUserInfo.profile.id.toString();
   const email = authData.additionalUserInfo.profile.email;
   const owner = authData.additionalUserInfo.profile.name;
   const userData = await base.fetch(id, {context: this});
