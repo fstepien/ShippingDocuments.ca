@@ -7,7 +7,7 @@ class Welcome extends Component {
     return (
     <React.Fragment>
       <div className="container login mt50">
-        <Link to={`/Login`}>
+        <Link to={`/BOL`}>
             <button type="submit" className="loginBtn">START NEW BOL →</button>
         </Link>
       </div>

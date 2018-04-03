@@ -65,7 +65,33 @@ deleteProduct = key => {
   products[key] = null;
   delete order[key];
   this.setState({order, products});
-
+}
+eraseAll = () => {
+  let products = {...this.state.products};
+  let order = {...this.state.order};
+  let shipFrom = {...this.state.shipFrom}
+  let shipTo = {...this.state.shipTo}
+  let profile = {...this.state.profile}
+  Object.keys(products).forEach( key => products[key] = null);
+  order = {};
+  shipFrom = {
+    company: "",
+    address: "",
+    address2:"",
+    contact: "",
+    phone: ""
+  };
+  shipTo = {
+    company: "",
+    address: "",
+    address2:"",
+    contact: "",
+    phone: ""
+  };
+  profile = {
+    number: ""
+  };
+  this.setState({order, products, shipFrom, shipTo, profile});
 }
 
 addNumber = newNum => {
@@ -106,6 +132,8 @@ render() {
             changeShipFrom={this.changeShipFrom}
             shipTo={this.state.shipTo}
             changeShipTo={this.changeShipTo}
+            logout={this.props.logout}
+            eraseAll={this.eraseAll}
             />
        </React.Fragment> 
     );

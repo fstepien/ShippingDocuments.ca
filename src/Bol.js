@@ -27,10 +27,12 @@ const total = orderIds.reduce((prevTotal, key) => {
         
         <div className="container mt50">
         <ReactToPrint
-          trigger={() => <button id="print"><img  src="/assets/print.svg" alt="minus" title="Print BOL"/></button>}
+          trigger={() => <button id="printBtn"><img  src="/assets/print.svg" alt="minus" title="Print BOL"/></button>}
           content={() => this.bolRef}
           
         /> 
+        <button id="logoutBtn"><img  src="/assets/exit.svg" alt="logout" title="Logout" onClick={this.props.logout}/></button>
+        <button id="eraseBtn"><img  src="/assets/eraser.svg" alt="Erase ALL" title="Erase All" onClick={this.props.eraseAll}/></button>
           <div className="box bol-form" ref={el => (this.bolRef = el)}>  
               <div className="bol-list">
                 <h2>Bill of Lading</h2>

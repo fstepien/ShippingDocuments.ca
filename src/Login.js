@@ -14,6 +14,15 @@ state = {
   email: null
 }
 
+// componentDidMount() {
+//   let user = this.state.id;
+//   firebase.auth().onAuthStateChanged(user => {
+//     if(user) {
+//       this.authHandler({user});
+//     }
+//   })
+// }
+
 authHandler = async (authData) => {
   const id = authData.additionalUserInfo.profile.id;
   const email = authData.additionalUserInfo.profile.email;
@@ -28,8 +37,16 @@ authHandler = async (authData) => {
     email, 
     owner}
   );
-  this.props.history.push(`/Form/${id}`)
+  // this.props.history.push(`/Form/${id}`)
 } 
+
+logout = async () => {
+  await firebase.auth().signOut();
+  this.setState({ 
+    id: null,
+    owner: null,
+    email: null });
+}
 
 authenticate = (provider) => {
     console.log(`${provider}AuthProvider`);
@@ -43,7 +60,7 @@ authenticate = (provider) => {
   render() { 
     if(!this.state.id){
       return <LoginOptions authenticate={this.authenticate}/> }
-      return <Form userId={this.state.id}/>
+      return <Form userId={this.state.id} logout={this.logout}/>
   }
 }
 

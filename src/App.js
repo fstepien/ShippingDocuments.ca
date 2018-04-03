@@ -15,8 +15,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/"  component={Welcome}/>
-              <Route exact path="/Login"  component={Login}/>
-              <Route exact path="/Form/:userId"  component={Login}/>
+              <Route exact path="/BOL"  component={Login}/>
               <Route component={NotFound}/>
             </Switch>
           </React.Fragment>
