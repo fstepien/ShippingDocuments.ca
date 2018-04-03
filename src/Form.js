@@ -27,10 +27,12 @@ state = {
     number: ""
   }
 };
+   
 
 componentDidMount() {
-this.ref = base.syncState(`${this.props.match.params.userId}/products`, { context: this, 
-state: 'products'
+this.ref = base.syncState(`${this.props.userId}/products`, { 
+  context: this, 
+  state: 'products'
 });
 }
 
@@ -39,7 +41,6 @@ componentWillUnmount() {
 }
 
 addToOrder = (key, value) => {
-  console.log(key, value);
   const order = {...this.state.order};
   order[key] = order[key] + value || value;
   this.setState({order: order});
@@ -60,8 +61,11 @@ addProduct = product => {
 
 deleteProduct = key => {
   const products = {...this.state.products};
+  const order = {...this.state.order}
   products[key] = null;
-  this.setState({products});
+  delete order[key];
+  this.setState({order, products});
+
 }
 
 addNumber = newNum => {
@@ -86,7 +90,7 @@ render() {
     return (
        <React.Fragment> 
         <section className="container hello mt50">
-        <AddProduct addProduct={this.addProduct} />
+        <AddProduct addProduct={this.addProduct}/>
         <ProductList 
             products={this.state.products}
             addToOrder={this.addToOrder}

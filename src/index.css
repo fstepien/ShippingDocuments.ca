@@ -55,7 +55,7 @@ ul {
   list-style: none;
 }
 
-header ul, header button, .loginBtn {
+header ul, header button, .loginBtn, .gmailBtn {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -80,6 +80,21 @@ header button, .loginBtn {
   box-shadow: var(--shadow);
   transition-duration: 1s;
 }
+.gmailBtn {
+  background: white;
+  color: black;
+  border: solid red 2px;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  transition-duration: 1s;
+}
+.gmailBtn:hover, .gmailBtn:focus {
+  background: red;
+  color: white;
+  border: solid red 2px;
+  transition-duration: 0.5s;
+}
+
 header button {
   box-shadow: 0px 5px 25px 0px #777;
 }
@@ -89,6 +104,9 @@ header button:hover, .loginBtn:hover {
   transition-duration: 0.5s;
   cursor: pointer;
 }
+
+
+
 .hello {
   display: grid;
   grid-gap: 3em;
@@ -145,7 +163,8 @@ header button:hover, .loginBtn:hover {
   margin: 0;
   box-sizing: 
 }
-.product-edit button:hover {
+.product-edit button:hover,
+.product-edit button:focus {
   color: white;
   background: #333;
   transition-duration: 0.5s;

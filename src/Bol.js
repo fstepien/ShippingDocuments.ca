@@ -41,6 +41,7 @@ const total = orderIds.reduce((prevTotal, key) => {
                 {orderIds
                   .sort((a,b) => this.props.products[a].desc.toLowerCase() > this.props.products[b].desc.toLowerCase() ? 1: -1)
                   .map(key => {
+                        console.log(`maped key: ${key}`)
                         return <Product 
                           key={key}
                           product={this.props.products[key]}

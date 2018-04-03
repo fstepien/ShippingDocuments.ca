@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Welcome from './Welcome';
 import Login from './Login';
-import Form from './Form';
 import NotFound from './NotFound';
 
 
@@ -17,7 +16,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/"  component={Welcome}/>
               <Route exact path="/Login"  component={Login}/>
-              <Route exact path="/Form/:userId"  component={Form}/>
+              <Route exact path="/Form/:userId"  component={Login}/>
               <Route component={NotFound}/>
             </Switch>
           </React.Fragment>

@@ -6,10 +6,10 @@ const LoginOptions = (props) => {
     return (
       <div className="container mt50">
         <div className="box">
-            <h2>Product Login</h2>
+            <h2>User Login</h2>
             <p>Sign in to create your custom bill of lading and manage your account.</p>
             {/* <button className="email" onClick={() => props.authenticate('Email')}>Login with Email</button> */}
-            <button className="gmail" onClick={() => props.authenticate('Google')}>Login with Gmail</button>
+            <button className="gmailBtn" onClick={() => props.authenticate('Google')}>Login with Gmail</button>
         </div>
       </div>
     );
