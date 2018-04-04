@@ -24,8 +24,7 @@ state = {
 // }
 
 authHandler = async (authData) => {
-  console.log(authData);
-  const id = authData.additionalUserInfo.profile.id.toString();
+  const id = authData.user.uid;
   const email = authData.additionalUserInfo.profile.email;
   const owner = authData.additionalUserInfo.profile.name;
   const userData = await base.fetch(id, {context: this});
@@ -50,7 +49,6 @@ logout = async () => {
 }
 
 authenticate = (provider) => {
-    console.log(`${provider}AuthProvider`);
     const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
       .auth()

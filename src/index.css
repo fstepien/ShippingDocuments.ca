@@ -80,6 +80,9 @@ header button, .loginBtn {
   box-shadow: var(--shadow);
   transition-duration: 1s;
 }
+.loginBtn {
+  font-weight: bold;
+}
 .gmailBtn, .githubBtn, .emailBtn {
   background: white;
   color: black;
@@ -118,7 +121,21 @@ header button:hover, .loginBtn:hover {
 .hello {
   display: grid;
   grid-gap: 3em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  color: white;
+}
+.hello h1{
+  align-self: center;
+  filter: drop-shadow(1px 1px 2px black);
+}
+.hello p {
+  filter: drop-shadow(1px 1px 1px black);
+  padding-bottom: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.box1 {
+  align-self: center;
 }
 .box {
   background: white;
@@ -129,6 +146,13 @@ header button:hover, .loginBtn:hover {
   /* overflow: show; */
   padding: 1em;
   position: relative;
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.previewImg {
+  width: 100%;
+  transition: 1s;
 }
 
 .product-edit, .product-list {
