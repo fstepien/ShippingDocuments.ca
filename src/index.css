@@ -121,7 +121,8 @@ header button:hover, .loginBtn:hover {
 .hello {
   display: grid;
   grid-gap: 3em;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   color: white;
 }
 .hello h1{
@@ -223,6 +224,7 @@ list-style: none;
   padding: 0px 10px 5px 10px;
   line-height: 1;
   border: 0;
+  color: black;
   border-bottom: 1px solid #000;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -248,10 +250,16 @@ list-style: none;
       padding: 0.2em;
       position: relative;
       top: 0.4em;
+      transition: 0.2s;
+    }
+    .product-item img:hover {
+      transform: scale(1.2);
+      transition: 0.2s;
     }
     .product-item input {
       width: 3em;
-    }
+      text-align: end;
+      margin: 0 0.5em;    }
 .my-product-label[data-state=false], .my-product-label[data-state=true], .add-product-label {
     position: absolute;
     border-radius: 5px;
