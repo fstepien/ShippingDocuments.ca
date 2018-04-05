@@ -8,6 +8,13 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
 
 body {
   margin: 0;
@@ -27,8 +34,8 @@ body {
 .mt50 {
   padding-top: 50px;
   overflow: visible;
-
 }
+
 button {
   border: 0;
 }
@@ -83,6 +90,37 @@ header button, .loginBtn {
 .loginBtn {
   font-weight: bold;
 }
+.user-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3em;
+  padding-top: 120px;
+  overflow: visible;
+}
+.user-item {
+  background: rgba(255, 255, 255, 0.411);
+  color: rgb(61, 60, 60);
+  box-shadow: var(--shadow);
+  padding: 1em;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-item p{
+  line-height: 1.3em;
+}
+.user-list span {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.footer {
+  text-align: end;
+  color: rgba(255, 255, 255, 0.623);
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
 .gmailBtn, .githubBtn, .emailBtn {
   background: white;
   color: black;
@@ -121,9 +159,17 @@ header button:hover, .loginBtn:hover {
 .hello {
   display: grid;
   grid-gap: 3em;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   color: white;
+}
+.form-box {
+  display: grid;
+  grid-gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  color: white;
+}
+.form-box div:last-child {
+  min-block-size: 5em;
 }
 .hello h1{
   align-self: center;
@@ -164,7 +210,6 @@ header button:hover, .loginBtn:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .product-edit input,
 .product-edit textarea,
 .product-edit select {
@@ -278,7 +323,7 @@ list-style: none;
   transition-duration: 1s;
 }
 .my-product-label[data-state=false]{
-  top: calc( 50% - 1em );
+  top: calc( 50% - 0.75em );
   width: 90%;
   text-align: center;
   transition-duration: 1s;
@@ -294,7 +339,6 @@ list-style: none;
 /* BOL COMPONENT */
 .bol-form {
   line-height: 2em;
-  margin-bottom: 100px;
 }
 .bol-product:first-of-type {
   border-bottom: solid 1px;

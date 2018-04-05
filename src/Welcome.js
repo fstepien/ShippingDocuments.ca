@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from './Footer';
 
 
 class Welcome extends Component {
@@ -18,7 +18,6 @@ _onMouseMove = e => {
   const walk = 50;
   const middleX = (e.pageX - e.currentTarget.parentElement.offsetLeft - width/2) * (-1) * walk / width;
   const middleY = (e.pageY - e.currentTarget.parentElement.offsetTop - 40 - height/2) * (-1) * walk / height;
-  console.log(middleX, middleY)
   let stateX = {...this.state.x};
   let stateY = {...this.state.y};
   stateX = middleX;
@@ -58,20 +57,35 @@ this.toggleHover();
         </Link>
         </div>
         <div className="box overflowHidden">
-        
-        <img 
-          src="/assets/preview.png" 
-          className="previewImg" 
-          alt="bill of lading preview" 
-          onMouseMove={this._onMouseMove.bind(this)}
-          onMouseEnter={this.toggleHover} 
-          onMouseLeave={this.laeveHover}
-          style={{
-            transform: `translateX(${this.state.x}%) translateY(${this.state.y}%) ${scaleStyle}`,
-            transition: '1s'
-        }}
-          /></div>
+                    <img 
+              src="/assets/preview.png" 
+              className="previewImg" 
+              alt="bill of lading preview" 
+              onMouseMove={this._onMouseMove.bind(this)}
+              onMouseEnter={this.toggleHover} 
+              onMouseLeave={this.laeveHover}
+              style={{
+                transform: `translateX(${this.state.x}%) translateY(${this.state.y}%) ${scaleStyle}`,
+                transition: '1s'
+            }}
+              />
+          </div>
       </section>
+      <section className="container user-list">
+            <div className="user-item">
+              <p>"We don't regularly ship haz mat and our ERP is not set up for it. This has been a go to form to make sure the carrier accepts my shipping documents" </p>
+              <span>Warehouse Manager<br /> Brampton, ON</span>
+            </div>
+            <div className="user-item">
+            <p>"My customers appreciate when I send a bill of lading with RMAs or warehouse transfers. I keep commodity products in the database and "erase all" after shipping propriatery products."</p>
+            <span>Technical Sales Manager <br />Ajax, ON</span>
+            </div>
+            <div className="user-item">
+              <p>"We manufacture and ship metal parts. ShippingDocuments.ca has saved me time when shipping out empty dangerous goods containers back to the supplier" </p>
+              <span>Plant Manager <br />Etobicoke, ON</span>
+            </div>
+      </section>
+      <Footer />
     </React.Fragment>
     );
   }

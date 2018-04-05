@@ -3,6 +3,7 @@ import AddProduct from './AddProduct';
 import ProductList from './ProductList';
 import Bol from './Bol';
 import base from "./base";
+import Footer from './Footer';
 
 class Form extends Component {
 
@@ -115,7 +116,7 @@ changeShipTo = (updatedShipTo) => {
 render() {
     return (
        <React.Fragment> 
-        <section className="container hello mt50">
+        <section className="container form-box mt50">
         <AddProduct addProduct={this.addProduct}/>
         <ProductList 
             products={this.state.products}
@@ -135,6 +136,7 @@ render() {
             logout={this.props.logout}
             eraseAll={this.eraseAll}
             />
+            <Footer />
        </React.Fragment> 
     );
   }
