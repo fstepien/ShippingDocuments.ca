@@ -65,6 +65,7 @@ ul {
 header ul, header button, .loginBtn, .gmailBtn, .githubBtn, .emailBtn {
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  width: 100%
 }
 
 header li {
@@ -361,6 +362,9 @@ list-style: none;
   grid-column: 1 / 6;
   padding: 5px;
   margin: 0 5px 10px 0;
+}
+.driver {
+  background: inherit;
 }
 /* Main BOL GRID */
 .bol-right, .bol-info, .total, .pallets, .tel-number, .sig{

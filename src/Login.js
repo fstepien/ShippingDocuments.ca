@@ -9,10 +9,9 @@ import Form from './Form';
 class Login extends Component {
 
 state = {
-  id: null,
-  owner: null,
-  email: null
+  id: null
 }
+
 
 // componentDidMount() {
 //   let user = this.state.id;
@@ -23,19 +22,18 @@ state = {
 //   })
 // }
 
+
 authHandler = async (authData) => {
   const id = authData.user.uid;
-  const email = authData.additionalUserInfo.profile.email;
-  const owner = authData.additionalUserInfo.profile.name;
+  // const email = authData.additionalUserInfo.profile.email;
+  // const owner = authData.additionalUserInfo.profile.name;
   const userData = await base.fetch(id, {context: this});
   if(!userData.id){
     await base.post(`${id}/id`, {
       data: id});
   }
   this.setState(
-    {id, 
-    email, 
-    owner}
+    {id}
   );
   // this.props.history.push(`/Form/${id}`)
 } 
@@ -43,9 +41,7 @@ authHandler = async (authData) => {
 logout = async () => {
   await firebase.auth().signOut();
   this.setState({ 
-    id: null,
-    owner: null,
-    email: null });
+    id: null });
 }
 
 authenticate = (provider) => {
@@ -59,7 +55,7 @@ authenticate = (provider) => {
   render() { 
     if(!this.state.id){
       return <LoginOptions authenticate={this.authenticate}/> }
-      return <Form userId={this.state.id} logout={this.logout}/>
+      return <Form userId={this.state.id} logout={this.logout} />
   }
 }
 

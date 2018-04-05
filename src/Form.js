@@ -7,6 +7,7 @@ import Footer from './Footer';
 
 class Form extends Component {
 
+
 state = {
   order: {},
   products: {},
@@ -25,10 +26,20 @@ state = {
     phone: ""
   },
   profile: {
-    number: ""
+    orderInfo: {
+      date: "",
+      po: "",
+      order: ""
+    },
+    shippingInfo: {
+      number: "",
+      name: "",
+      carrier: "",
+      terms: ""
+    }
   }
 };
-   
+
 
 componentDidMount() {
 this.ref = base.syncState(`${this.props.userId}/products`, { 
@@ -70,9 +81,9 @@ deleteProduct = key => {
 eraseAll = () => {
   let products = {...this.state.products};
   let order = {...this.state.order};
-  let shipFrom = {...this.state.shipFrom}
-  let shipTo = {...this.state.shipTo}
-  let profile = {...this.state.profile}
+  let shipFrom = {...this.state.shipFrom};
+  let shipTo = {...this.state.shipTo};
+  let profile = {...this.state.profile};
   Object.keys(products).forEach( key => products[key] = null);
   order = {};
   shipFrom = {
@@ -90,16 +101,21 @@ eraseAll = () => {
     phone: ""
   };
   profile = {
-    number: ""
+    orderInfo: {
+      date: "",
+      po: "",
+      order: ""
+    },
+    shippingInfo: {
+      number: "",
+      name: "",
+      carrier: "",
+      terms: ""
+    }
   };
   this.setState({order, products, shipFrom, shipTo, profile});
 }
 
-addNumber = newNum => {
-  let profile = {...this.state.profile};
-  profile.number = newNum;
-  this.setState({profile});
-}
 
 changeShipFrom = (updatedShipFrom) => {
   let shipFrom = {...this.state.shipFrom};
@@ -113,7 +129,19 @@ changeShipTo = (updatedShipTo) => {
   this.setState({shipTo});
 }
 
+changeOrderInfo = (updatedOrderInfo) => {
+  let profile = {...this.state.profile}
+  profile.orderInfo = updatedOrderInfo;
+  this.setState({profile});
+}
+changeShippingInfo = (updatedShippingInfo) => {
+  let profile = {...this.state.profile}
+  profile.shippingInfo = updatedShippingInfo;
+  this.setState({profile});
+}
+
 render() {
+
     return (
        <React.Fragment> 
         <section className="container form-box mt50">
@@ -135,6 +163,11 @@ render() {
             changeShipTo={this.changeShipTo}
             logout={this.props.logout}
             eraseAll={this.eraseAll}
+            orderInfo={this.state.profile.orderInfo}
+            changeOrderInfo={this.changeOrderInfo}
+            shippingInfo={this.state.profile.shippingInfo}
+            changeShippingInfo={this.changeShippingInfo}
+    
             />
             <Footer />
        </React.Fragment> 

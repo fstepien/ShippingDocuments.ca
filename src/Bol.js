@@ -11,6 +11,7 @@ import BolFooter from './BolFooter';
 
 class Bol extends Component {
 
+
 render() {
 const orderIds = Object.keys(this.props.order);
 const total = orderIds.reduce((prevTotal, key) => {
@@ -27,7 +28,7 @@ const total = orderIds.reduce((prevTotal, key) => {
         
         <div className="container mt50">
         <ReactToPrint
-          trigger={() => <button id="printBtn"><img  src="/assets/print.svg" alt="minus" title="Print BOL"/></button>}
+          trigger={() => <button id="printBtn"><img src="/assets/print.svg" alt="minus" title="Print BOL"/></button>}
           content={() => this.bolRef}
           
         /> 
@@ -36,7 +37,7 @@ const total = orderIds.reduce((prevTotal, key) => {
           <div className="box bol-form" ref={el => (this.bolRef = el)}>  
               <div className="bol-list">
                 <h2>Bill of Lading</h2>
-                <OrderInfo />
+                <OrderInfo orderInfo={this.props.orderInfo} changeOrderInfo={this.props.changeOrderInfo}/>
                 <Consignor shipFrom={this.props.shipFrom} changeShipFrom={this.props.changeShipFrom}/>
                 <Consignee shipTo={this.props.shipTo} changeShipTo={this.props.changeShipTo}/>
                 <BolListHeader />
@@ -54,8 +55,8 @@ const total = orderIds.reduce((prevTotal, key) => {
                 </div>
                 <Pallets />
                 <BolFooter 
-                  addNumber={this.props.addNumber}
-                  number={this.props.number}/>              
+                  changeShippingInfo={this.props.changeShippingInfo}
+                  shippingInfo={this.props.shippingInfo}/>              
               </div>
               
           </div>

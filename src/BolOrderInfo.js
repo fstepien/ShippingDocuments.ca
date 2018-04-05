@@ -8,33 +8,19 @@ const dd = today.getDate();
 const mm = today.getMonth()+1; 
 const yyyy = today.getFullYear(); 
 const startDate = `${yyyy} - ${mm} - ${dd}`; 
-this.setState({date: startDate})
+const updatedOrderInfo = {
+  ...this.props.orderInfo, 
+  date: startDate
+};
+this.props.changeOrderInfo(updatedOrderInfo);
 }
 
-dateRef = React.createRef();
-poRef = React.createRef();
-orderRef = React.createRef();
-
-state = {
-  date: "",
-  po: "",
-  order: ""
-}
-
-changeDate = () => {
-  let date = {...this.state.date};
-  date = this.dateRef.value.value;
-  this.setState({date})
-}
-changePo = () => {
-  let po = {...this.state.po};
-  po = this.poRef.value.value;
-  this.setState({po})
-}
-changeOrder = () => {
-  let order = {...this.state.order};
-  order = this.orderRef.value.value;
-  this.setState({order})
+handleChange = e => {
+  const updatedOrderInfo = {
+    ...this.props.orderInfo, 
+    [e.currentTarget.name]: e.currentTarget.value
+  };
+  this.props.changeOrderInfo(updatedOrderInfo);
 }
 
 render() {
@@ -43,22 +29,22 @@ render() {
       <div className="bol-info">
         <span>Date:</span> 
         <input 
-          ref={this.dateRef} 
+          name="date"
           type="text" 
-          onChange={this.changeDate} 
-          value={this.state.date}/>
+          onChange={this.handleChange} 
+          value={this.props.orderInfo.date}/>
         <span>Order Number:</span> 
         <input 
-          ref={this.orderRef} 
+          name="order"
           type="text" 
-          onChange={this.changeOrder} 
-          value={this.state.order} />
+          onChange={this.handleChange} 
+          value={this.props.orderInfo.order} />
         <span>PO Number:</span> 
         <input 
-          ref={this.poRef} 
+          name="po" 
           type="text" 
-          onChange={this.changePo} 
-          value={this.state.po} />
+          onChange={this.handleChange} 
+          value={this.props.orderInfo.po} />
       </div>
     );
   }
