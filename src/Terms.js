@@ -16,7 +16,12 @@ if(this.props.termsDisplay){
 } else {
     termsDisplay = `none`
 }    
-
+let bottomDisplay;
+if(this.props.bottomDisplay){
+    bottomDisplay = 'block'
+} else {
+    bottomDisplay = `none`
+} 
 
 let modalContent = {
     margin: '10vh auto',
@@ -48,7 +53,7 @@ return (
                 <h1>Terms and Conditions</h1><button className="closeTermsBtn" onClick={this.props.toggleTerms}>X</button>
             </div>
             <TermsText />
-            <div className="bottom">
+            <div className="bottom" style={{display: bottomDisplay}}>
                 <form onSubmit={this.continuePrint}>
                     <div>
                         

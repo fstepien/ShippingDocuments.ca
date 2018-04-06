@@ -15,11 +15,13 @@ class Bol extends Component {
 hiddenRef = React.createRef();
 
 state = {
-    termsDisplay: false
+    termsDisplay: false,
+    bottomDisplay: true
 }
 
 toggleTerms = () => {
-  this.setState({termsDisplay: !this.state.termsDisplay})
+  this.setState({termsDisplay: !this.state.termsDisplay});
+
 }    
 
 executePrint = () => {
@@ -86,7 +88,7 @@ const total = orderIds.reduce((prevTotal, key) => {
               
           </div>
         </div>
-        <Terms termsDisplay={this.state.termsDisplay} toggleTerms={this.toggleTerms} executePrint={this.executePrint} />
+        <Terms termsDisplay={this.state.termsDisplay} bottomDisplay={this.state.bottomDisplay} toggleTerms={this.toggleTerms} executePrint={this.executePrint} />
        </React.Fragment> 
     );
   }
