@@ -78,7 +78,7 @@ padding: 0 20px 0 0;
   text-align: center;
   overflow: visible;
 }
-header button, .loginBtn {
+header button, .loginBtn, .termsSubmitBtn {
   background: var(--orange);
   color: black;
   border-radius: 5px;
@@ -101,6 +101,7 @@ header button, .loginBtn {
 .user-item {
   background: rgba(255, 255, 255, 0.411);
   color: rgb(61, 60, 60);
+  border-radius: 3px;
   box-shadow: var(--shadow);
   padding: 1em;
   font-size: 0.8em;
@@ -110,6 +111,8 @@ header button, .loginBtn {
 }
 .user-item p{
   line-height: 1.3em;
+  font-style: italic;
+
 }
 .user-list span {
   font-size: 0.9em;
@@ -130,19 +133,12 @@ header button, .loginBtn {
   transition-duration: 1s;
   margin-top: 1em;
 }
-.gmailBtn {
-  border: solid red 2px;
-}
-.gmailBtn:hover, .gmailBtn:focus {
-  background: red;
-  color: white;
-  border: solid red 2px;
-  transition-duration: 0.5s;
-}
-.githubBtn {
+
+
+.githubBtn, .gmailBtn {
   border: solid #24292e 2px;
 }
-.githubBtn:hover, .githubBtn:focus {
+.githubBtn:hover, .githubBtn:focus, .gmailBtn:hover, .gmailBtn:focus {
   background:#24292e;
   color: white;
   border: solid #24292e 2px;
@@ -425,9 +421,10 @@ list-style: none;
   right: calc(-90% + 13.5em);  
 }
 
-#printBtn:hover, #printBtn:focus {  
+#printBtn:hover, #printBtn:focus, .termsSubmitBtn:hover, .termsSubmitBtn:focus {  
   background: rgb(113, 206, 84);
   transition: 0.5s;
+  cursor: pointer;
 }
 #logoutBtn:hover, #logoutBtn:focus {  
   background:var(--orange);
@@ -437,3 +434,42 @@ list-style: none;
   background: rgb(219, 77, 77);
   transition: 0.5s;
 }
+/* TERMS AND CONDITIONS */
+.modal-content {
+  margin: 10vh auto;
+  height: 80vh;
+  width: 70%;
+  border-radius: 5px;
+  background-color: white;
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 1fr auto
+} 
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.closeTermsBtn {
+  background: none;
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+.closeTermsBtn:hover, .closeTermsBtn:focus {
+  background: none;
+  font-size: 2em;
+  transition: 0.5s;
+}
+.terms {
+  height: 70%;
+  flex-basis: auto;
+  position: relative;
+  text-align: justify;
+  overflow: auto;
+}
+
+.termsSubmitBtn {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 40%;
+}
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import Terms from './Terms';
 
 
 class Welcome extends Component {
@@ -73,7 +74,7 @@ this.toggleHover();
       </section>
       <section className="container user-list">
             <div className="user-item">
-              <p>"We don't regularly ship haz mat and our ERP is not set up for it. This has been a go to form to make sure the carrier accepts my shipping documents" </p>
+              <p>"We don't regularly ship haz mat and our ERP is not set up for it. This has been a go to form to make sure the carrier accepts my shipping documents." </p>
               <span>Warehouse Manager<br /> Brampton, ON</span>
             </div>
             <div className="user-item">
@@ -81,11 +82,12 @@ this.toggleHover();
             <span>Technical Sales Manager <br />Ajax, ON</span>
             </div>
             <div className="user-item">
-              <p>"We manufacture and ship metal parts. ShippingDocuments.ca has saved me time when shipping out empty dangerous goods containers back to the supplier" </p>
+              <p>"We manufacture and ship metal parts. ShippingDocuments.ca has saved me time when shipping out empty dangerous goods containers back to the supplier." </p>
               <span>Plant Manager <br />Etobicoke, ON</span>
             </div>
       </section>
       <Footer />
+      <Terms />
     </React.Fragment>
     );
   }

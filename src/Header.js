@@ -11,9 +11,9 @@ const Header = (props) => {
                 <span className="bol">BOL</span>
             </h1>
             </Link>
-            <ul>    
+            {/* <ul>    
                 <li><button>TDG Training</button></li>
-            </ul>
+            </ul> */}
           </div>
         </header>
         
