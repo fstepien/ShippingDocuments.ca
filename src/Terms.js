@@ -2,6 +2,12 @@ import React from 'react';
 import TermsText from './TermsText';
 
 class Terms extends React.Component {
+
+continuePrint = (e) => {
+        e.preventDefault();
+        this.props.executePrint();
+    }
+
 render() {
 
 let termsDisplay;
@@ -10,7 +16,6 @@ if(this.props.termsDisplay){
 } else {
     termsDisplay = `none`
 }    
-console.log(termsDisplay)
 
 
 let modalContent = {
@@ -24,6 +29,7 @@ let modalContent = {
     gridTemplateRows: '1fr 10fr 1fr',
     justifyContent: 'space-between'
 } 
+
 
 return (     
 <React.Fragment>  
@@ -43,7 +49,7 @@ return (
             </div>
             <TermsText />
             <div className="bottom">
-                <form >
+                <form onSubmit={this.continuePrint}>
                     <div>
                         
                     <input type="checkbox" required/>
