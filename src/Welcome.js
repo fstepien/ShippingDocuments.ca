@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import Terms from './Terms';
 
 
 class Welcome extends Component {
@@ -40,13 +39,13 @@ this.toggleHover();
 
   render() {
 
-    var scaleStyle;
+    let scaleStyle;
     if (this.state.hover) {
       scaleStyle = 'scale(1.5)';
     } else {
       scaleStyle = 'scale(1)';
     }
-
+  
     return (
     <React.Fragment>
       <section className="container hello mt50">
@@ -87,7 +86,6 @@ this.toggleHover();
             </div>
       </section>
       <Footer />
-      <Terms />
     </React.Fragment>
     );
   }

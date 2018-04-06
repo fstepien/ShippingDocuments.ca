@@ -435,7 +435,7 @@ list-style: none;
   transition: 0.5s;
 }
 /* TERMS AND CONDITIONS */
-.modal-content {
+/* .modal-content {
   margin: 10vh auto;
   height: 80vh;
   width: 70%;
@@ -443,8 +443,8 @@ list-style: none;
   background-color: white;
   padding: 2em;
   display: grid;
-  grid-template-rows: 1fr auto
-} 
+  grid-template-rows: 1fr auto 1fr;
+}  */
 .top {
   display: flex;
   justify-content: space-between;
@@ -460,16 +460,22 @@ list-style: none;
   transition: 0.5s;
 }
 .terms {
-  height: 70%;
+  /* height: 45vh; */
   flex-basis: auto;
-  position: relative;
   text-align: justify;
   overflow: auto;
 }
-
+.bottom form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom form div {
+  margin-right: 1em;
+}
 .termsSubmitBtn {
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  width: 40%;
+  flex-grow: 4;
 }
 
