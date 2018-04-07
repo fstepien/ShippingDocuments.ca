@@ -85,11 +85,12 @@ const total = orderIds.reduce((prevTotal, key) => {
                   changeShippingInfo={this.props.changeShippingInfo}
                   shippingInfo={this.props.shippingInfo}/>              
               </div>
-              
           </div>
         </div>
         <Terms termsDisplay={this.state.termsDisplay} bottomDisplay={this.state.bottomDisplay} toggleTerms={this.toggleTerms} executePrint={this.executePrint} />
+        
        </React.Fragment> 
+       
     );
   }
 }

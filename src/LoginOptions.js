@@ -10,6 +10,7 @@ const LoginOptions = (props) => {
             <p>Sign in to create your custom bill of lading and manage your account.</p>
             {/* <button className="emailBtn" onClick={() => props.authenticate('Email')}>Login with Email</button> <br/> */}
             <button className="gmailBtn" onClick={() => props.authenticate('Google')}>Login with Gmail</button><br />
+            <button className="gmailBtn" onClick={() => props.authenticate('Facebook')}>Login with Facebook</button><br />
             <button className="githubBtn" onClick={() => props.authenticate('Github')}>Login with Github</button>
         </div>
       </div>

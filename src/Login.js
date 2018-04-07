@@ -49,7 +49,8 @@ authenticate = (provider) => {
     firebaseApp
       .auth()
       .signInWithPopup(authProvider)
-      .then(this.authHandler);
+      .then(this.authHandler)
+      .catch(err => alert(err.message));
 }
 
   render() { 
