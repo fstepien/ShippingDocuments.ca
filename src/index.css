@@ -91,13 +91,7 @@ header button, .loginBtn, .termsSubmitBtn {
 .loginBtn {
   font-weight: bold;
 }
-.user-list{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3em;
-  padding-top: 120px;
-  overflow: visible;
-}
+
 .user-item {
   background: rgba(255, 255, 255, 0.411);
   color: rgb(61, 60, 60);
@@ -152,22 +146,57 @@ header button:hover, .loginBtn:hover {
   transition-duration: 0.5s;
   cursor: pointer;
 }
+/* BOXES THAT USE GRID FOR LAYOUT */
+.user-list{
+  padding-top: 120px;
+  overflow: visible;
+}
 
+.hello {
+  color: white;
+}
+.form-box {
+  color: white;
+}
+.user-item{
+  margin-top: 3em;
+}
+.loginBtn{
+  margin-bottom: 3em;
+}
+@supports ( display: grid ) {
+.user-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3em;
+}
+.user-item{
+  margin-top: 0;
+}
+@media (max-width: 600px){
+  .user-list{
+    grid-template-columns: 1fr;
+  }
+}
+.loginBtn{
+  margin-bottom: 0;
+}
 .hello {
   display: grid;
   grid-gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  color: white;
+ 
 }
 .form-box {
   display: grid;
   grid-gap: 3em;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  color: white;
+}
 }
 .form-box div:last-child {
   min-block-size: 5em;
 }
+
 .hello h1{
   align-self: center;
   filter: drop-shadow(1px 1px 2px black);
@@ -233,6 +262,15 @@ header button:hover, .loginBtn:hover {
 .product-edit button {
   width: 100%;
 }
+.product-edit select {
+  color: #777;
+}
+/* .product-edit select.option[value=""] {
+  color: black;
+}
+.product-edit option:first-child {
+  color: #777;
+} */
 .product-edit button {
   padding: 0;
   margin: 0;

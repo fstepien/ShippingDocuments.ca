@@ -25,14 +25,24 @@ addProduct = (e) => {
 }
 
 render() {
+if(this.pgRef){
+  console.log('empty');
+} else {
+  console.log(`not empty ${this.pgRef}`)
+}
 return (
   <div className="box">
     <span className="add-product-label">Add Products</span>
     <form className="product-edit" onSubmit={this.addProduct}>
       <input name="desc" ref={this.descRef} type="text" placeholder="Product Name" required />
-      <input name="un" ref={this.unRef} type="text" placeholder="UN Number" />
+      <input name="un" ref={this.unRef} type="text" placeholder="UN Number" pattern="[0-9]{4}" title="UN numbers are four-digit numbers"/>
       <input name="class" ref={this.classDGRef} type="text" placeholder="Class" />
-      <input name="pg" ref={this.pgRef} type="text" placeholder="P.G." />
+      <select name="pg" ref={this.pgRef} type="text" placeholder="P.G."> 
+        <option defaultValue value="">P.G.</option>
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+      </select>
       <input name="kg" ref={this.kgRef} type="text" placeholder="Weight (kg)" required/>
       <input name="nos" ref={this.nosRef} type="text" placeholder="N.O.S." />
       <button type="submit">+ Add Product</button>
