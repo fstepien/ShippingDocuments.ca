@@ -1,7 +1,7 @@
 TDG BOL
 ==============
 
-[Live Link (Still Building... hoping to have it up this week)](shippingdocuments.ca/assets/bol.JPG)
+[ShippingDocuments.ca](https://shippingdocuments.ca)
 
 Bill of Lading Generator based on Canadian TDG.  :truck::page_facing_up::large_orange_diamond:
 
@@ -10,10 +10,13 @@ Bill of Lading Generator based on Canadian TDG.  :truck::page_facing_up::large_o
   - normalize.css
 + React
   - JSX
-  - URL ruting with "react-router-dom": "^4.2.2",
+  - URL routing with "react-router-dom": "^4.2.2",
   - User products maintained in state
   - .createRef with "react"/"react-dom" "^16.3.0-alpha.1"
 + Firebase :fire:
-![](http://shippingdocuments.ca/assets/bol.JPG)
+![](http://meta.shippingdocuments.ca/bol.JPG)
 ![](http://bol.filipstepien.com/assets/bol.gif)
+![](https://meta.filipstepien.com/shipping.grid.jpg)
+![](https://meta.filipstepien.com/shipping.notes.jpg)
+
 
